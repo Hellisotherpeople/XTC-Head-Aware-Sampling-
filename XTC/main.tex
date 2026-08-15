@@ -130,7 +130,7 @@ These methods focus on the tail or the global shape of the distribution.
 \paragraph{Sequence-level and training-time diversity.}
 Diverse beam search injects inter-group diversity penalties into beam decoding \citep{vijayakumar2018diverse}.
 Contrastive search \citep{su2022contrastive} and contrastive decoding \citep{li2023contrastive} improve generation by contrasting with degenerate continuations or weaker reference models.
-DoLa decodes by contrasting early and late layers \citep{chuang2023dola}, FUDGE steers generation with future discriminators \citep{yang2021fudge}, and COLD formulates controlled generation as energy-based sampling \citep{qin2022cold}.
+DoLa decodes by contrasting early and late layers \citep{chuang2023dola}, FUDGE steers generation with future discriminators \citep{Yang_2021}, and COLD formulates controlled generation as energy-based sampling \citep{qin2022cold}.
 Unlikelihood training discourages repeated tokens at the objective level \citep{welleck2020neural}, controllable generation methods steer with conditional prefixes or control codes \citep{keskar2019ctrl}, and MMI-based decoding promotes diversity through mutual-information objectives \citep{li2016diversity}.
 These methods operate at the sequence level, require auxiliary models, or modify training. \xtc{} operates on a single next-token distribution within any sampler stack.
 
