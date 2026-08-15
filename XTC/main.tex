@@ -84,7 +84,7 @@ The most widely adopted samplers truncate the low-probability tail or rescale th
 Temperature changes the relative sharpness of all logits \citep{ackley1985learning}.
 Top-$k$ and top-$p$ remove weak tokens by rank or cumulative mass \citep{fan2018hierarchical, holtzman2020curious}.
 Typical and truncation-based methods target atypical or improbable candidates \citep{meister2023typical, hewitt2022truncation}.
-Min-$p$ thresholds relative to the maximum token probability, adapting the cutoff to the peakedness of each distribution \citep{nguyen2024minp}.
+Min-$p$ thresholds relative to the maximum token probability, adapting the cutoff to the peakedness of each distribution \citep{ICLR2025_afa5f124}.
 These approaches share a structural assumption: undesirable randomness originates primarily in the tail of the distribution or in its overall entropy.
 
 Open-ended generation frequently exhibits a distinct failure mode.
@@ -122,7 +122,7 @@ Top-$k$ sampling \citep{fan2018hierarchical} and nucleus sampling (top-$p$) \cit
 Typical decoding removes atypical tokens according to an information-theoretic criterion \citep{meister2023typical}.
 Epsilon and eta sampling apply fixed or entropy-adaptive probability cutoffs \citep{hewitt2022truncation}.
 Mirostat maintains a target perplexity level through online surprise control \citep{basu2021mirostat}.
-Min-$p$ sampling thresholds relative to the maximum probability, adapting truncation to the peakedness of each distribution \citep{nguyen2024minp}.
+Min-$p$ sampling thresholds relative to the maximum probability, adapting truncation to the peakedness of each distribution \citep{ICLR2025_afa5f124}.
 Temperature scaling, the oldest diversity control, rescales all logits by a single factor \citep{ackley1985learning, renze2024effect}.
 These methods focus on the tail or the global shape of the distribution.
 \xtc{} targets the head.
@@ -229,7 +229,7 @@ Comparators include temperature scaling ($T \in \{1.1, 1.3\}$), top-$p$ (0.95), 
 \xtc{} conditions span conservative ($\rho{=}0.05$, $\tau{=}0.10$) through aggressive ($\rho{=}1.0$, $\tau{=}0.05$).
 
 \paragraph{Metrics.}
-Following the multi-metric philosophy of \citet{shaib2024diversity, tevet2021evaluating} we report five complementary diversity families.
+Following the multi-metric philosophy of \citet{shaib2024diversity} we report five complementary diversity families.
 \textbf{Distinct-$n$} measures the fraction of unique $n$-grams in a text \citep{li2016diversity}.
 \textbf{Self-BLEU-4} computes the average BLEU-4 score \citep{papineni2002bleu} between pairs of generations from the same prompt \citep{zhu2018texygen}.
 \textbf{Repeat trigram rate} measures the fraction of trigrams appearing more than once within a single generation.
@@ -311,7 +311,7 @@ Overall-quality at 70B is again null.
 \label{sec:exp_human_eval}
 
 Human preference remains the gold standard for open-ended generation \citep{hashimoto2019unifying}.
-The prompts come from the public Creative Writing Bench v3 prompt set released by Sam Peach as part of EQ-Bench\footnote{\url{https://github.com/EQ-bench/creative-writing-bench/blob/main/data/creative_writing_prompts_v3.json}} \citep{peach2024creativewritingbench}.
+The prompts come from the public Creative Writing Bench v3 prompt set released by Sam Peach as part of EQ-Bench\footnote{\url{https://github.com/EQ-bench/creative-writing-bench/blob/main/data/creative_writing_prompts_v3.json}} \citep{creative-writing-bench-v3}.
 The set contains 33 base writing prompts, each paired with multiple seed modifiers (genre, tone, scenario tags) that condition the requested continuation.
 We sampled 100 prompt+seed combinations uniformly across the 33 base prompts and generated paired responses using the Baseline ($T{=}1.0$) and \xtc{} ($\rho{=}1.0$, $\tau{=}0.1$) on Gemma~3 27B q4.
 We recruited 150 Master-qualified AMT workers (\$15/hr, above local minimum wage) to blindly rate the pairs.
@@ -851,7 +851,7 @@ The two interventions reinforce each other because they target complementary asp
 \label{app:strong_baselines}
 
 \xtc{} is conceptually distinct from tail-truncation samplers, but the practical question is whether well-tuned tail samplers close the diversity gap.
-We extended the comparator suite on the same 24-prompt creative pool (Gemma~3 27B q4) with two recent tail-shaping methods: eta sampling \citep{hewitt2022truncation} at $\eta{=}3{\times}10^{-4}$ and min-$p$ sampling \citep{nguyen2024minp} at $p_{\min}{=}0.10$, plus the min-$p$ + \xtc{} composition.
+We extended the comparator suite on the same 24-prompt creative pool (Gemma~3 27B q4) with two recent tail-shaping methods: eta sampling \citep{hewitt2022truncation} at $\eta{=}3{\times}10^{-4}$ and min-$p$ sampling \citep{ICLR2025_afa5f124} at $p_{\min}{=}0.10$, plus the min-$p$ + \xtc{} composition.
 Table~\ref{tab:strong_baselines} reports the result.
 Eta and min-$p$ each improve over top-$p$ on both Distinct-2 and repeat trigram rate, confirming that tighter tail control helps.
 \xtc{} alone exceeds both, and the min-$p$ + \xtc{} composition is best on every column, including the LLM-judge means. Composing min-$p$ (a tail control) with \xtc{} (a head control) targets two different parts of the distribution and the gains are additive.
