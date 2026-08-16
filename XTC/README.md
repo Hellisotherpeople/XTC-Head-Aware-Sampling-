@@ -27,10 +27,11 @@ This directory is an Overleaf-ready NeurIPS 2026 project for the XTC paper draft
 Both share `refs.bib`, `figures/`, and `neurips_2026.sty`. Body-text edits need to be
 applied to both files, or diffed across them before submission.
 
-`preprint.tex` credits Philipp Emanuel Weidmann (Independent Researcher) and Allen Roush
-(Thoughtworks) as equal-contribution co-first authors, with per-author footnotes recording
-that Weidmann originated the method and its reference implementations and that Roush ran
-the empirical program.
+`preprint.tex` author list, in order: Philipp Emanuel Weidmann (Independent Researcher),
+Allen G. Roush (Thoughtworks), Judah Goldfeder (Columbia University), Sanjay Basu (Oracle),
+Ravid Shwartz-Ziv (New York University). Weidmann and Roush are equal-contribution
+co-first authors, with per-author footnotes recording that Weidmann originated the method
+and its reference implementations and that Roush ran the empirical program.
 
 ## Mode switches
 
