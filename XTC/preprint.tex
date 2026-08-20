@@ -580,7 +580,7 @@ Practical deployments should therefore either gate \xtc{} by task type or protec
 Fourth, our empirical evaluation, while spanning three primary model families in the 12B--27B range plus a 70B scaling point (Llama 3.3 q4), is conducted entirely on quantized open-weight models \citep{dettmers2022gptq, lin2024awq}.
 A broader evaluation across additional mixture-of-experts architectures \citep{minaee2024large, brown2020language, touvron2023llama2}, state-space models, and non-English languages would strengthen the generality claims.
 
-Fifth, \xtc{} is a local decoding rule, not a substitute for model quality, calibration, or training-time anti-degeneration methods \citep{welleck2020neural, ouyang2022training,paech2026antislop}.
+Fifth, \xtc{} is a local decoding rule, not a substitute for model quality, calibration, or training-time anti-degeneration methods \citep{welleck2020neural, ouyang2022training}.
 It can redirect a model among already plausible next tokens, but it cannot create competence that the base model does not have.
 In particular, it cannot address corpus-level homogenization that originates in training data overlap or RLHF reward hacking \citep{anderson2024homogenization, kirk2024understanding, bai2022training}.
 
