@@ -1,639 +1,562 @@
-@INPROCEEDINGS{fan2018hierarchical,
-title     = "Hierarchical Neural Story Generation",
-author    = "Fan, Angela and Lewis, M. and Dauphin, Yann",
-booktitle = "Annual Meeting of the Association for Computational Linguistics",
-pages     = "889--898",
-year      =  2018,
-doi       = "10.18653/v1/p18-1082"
+% refs.bib -- normalized for BibTeX + natbib (plainnat).
+% Field conventions: plain BibTeX only (year/journal/booktitle/number/address);
+% no biblatex-only fields (date/journaltitle/issue/eprintclass/location).
+% Acronyms and proper nouns are brace-protected because plainnat lowercases titles.
+
+% ---------------------------------------------------------------------------
+% Decoding and sampling strategies
+% ---------------------------------------------------------------------------
+
+@inproceedings{fan2018hierarchical,
+  author    = {Fan, Angela and Lewis, Mike and Dauphin, Yann},
+  title     = {Hierarchical Neural Story Generation},
+  booktitle = {Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages     = {889--898},
+  year      = {2018}
 }
 
-@INPROCEEDINGS{hewitt2022truncation,
-title     = "Truncation Sampling as Language Model Desmoothing",
-author    = "Hewitt,  John and Manning,  Christopher D. and Liang,  Percy",
-booktitle = "Conference on Empirical Methods in Natural Language Processing",
-pages     = "3414--3427",
-year      =  2022,
-doi       = "10.48550/arxiv.2210.15191"
+@inproceedings{holtzman2020curious,
+  author    = {Holtzman, Ari and Buys, Jan and Du, Li and Forbes, Maxwell and Choi, Yejin},
+  title     = {The Curious Case of Neural Text Degeneration},
+  booktitle = {International Conference on Learning Representations},
+  year      = {2020}
 }
 
-@INPROCEEDINGS{holtzman2020curious,
-title     = "The Curious Case of Neural Text Degeneration",
-author    = "Holtzman, Ari and Buys, Jan and Du, Li and Forbes, M. and Choi, Yejin",
-booktitle = "International Conference on Learning Representations",
-volume    = "abs/1904.09751",
-year      =  2019,
-doi       = "10.48550/arxiv.1904.09751"
+@inproceedings{hewitt2022truncation,
+  author    = {Hewitt, John and Manning, Christopher D. and Liang, Percy},
+  title     = {Truncation Sampling as Language Model Desmoothing},
+  booktitle = {Findings of the Association for Computational Linguistics: {EMNLP} 2022},
+  pages     = {3414--3427},
+  year      = {2022}
 }
 
-@INPROCEEDINGS{basu2021mirostat,
-title     = "Mirostat: A Perplexity-Controlled Neural Text Decoding Algorithm",
-author    = "Basu, Sourya and Ramachandran, Govardana Sachithanandam and Keskar, N. and Varshney, L.",
-booktitle = "International Conference on Learning Representations (ICLR)",
-volume    = "abs/2007.14966",
-year      =  2020,
-doi       = "10.48550/arxiv.2007.14966"
+@inproceedings{basu2021mirostat,
+  author    = {Basu, Sourya and Ramachandran, Govardana Sachithanandam and Keskar, Nitish Shirish and Varshney, Lav R.},
+  title     = {Mirostat: A Neural Text Decoding Algorithm that Directly Controls Perplexity},
+  booktitle = {International Conference on Learning Representations},
+  year      = {2021}
 }
 
-@ARTICLE{meister2023typical,
-title         = "Typical Decoding for Natural Language Generation",
-author        = "Meister,  Clara and Pimentel,  Tiago and Wiher,  Gian and Cotterell,  Ryan",
-journal       = "ArXiv",
-volume        = "abs/2202.00666",
-abstract      = "Despite achieving incredibly low perplexities on myriad natural language corpora, today's language models still often underperform when used to generate text. This dichotomy has puzzled the language generation community for the last few years. In this work, we posit that the abstraction of natural language as a communication channel (\`{a} la Shannon, 1948) can provide new insights into the behaviors of probabilistic language generators, e.g., why high-probability texts can be dull or repetitive. Humans use language as a means of communicating information, and do so in an efficient yet error-minimizing manner, choosing each word in a string with this (perhaps subconscious) goal in mind. We propose that generation from probabilistic models should mimic this behavior. Rather than always choosing words from the high-probability region of the distribution--which have a low Shannon information content--we sample from the set of words with an information content close to its expected value, i.e., close to the conditional entropy of our model. This decision criterion can be realized through a simple and efficient implementation, which we call typical sampling. Automatic and human evaluations show that, in comparison to nucleus and top-k sampling, typical sampling offers competitive performance in terms of quality while consistently reducing the number of degenerate repetitions.",
-year          =  2022,
-url           = "https://arxiv.org/abs/2202.00666",
-archivePrefix = "arXiv",
-primaryClass  = "cs.CL",
-eprint        = "2202.00666"
-}
-
-@INPROCEEDINGS{li2023contrastive,
-title     = "Contrastive Decoding: Open-ended Text Generation as Optimization",
-author    = "Li, Xiang Lisa and Holtzman, Ari and Fried, Daniel and Liang, Percy and Eisner, Jason and Hashimoto, Tatsunori and Zettlemoyer, Luke and Lewis, M.",
-booktitle = "Annual Meeting of the Association for Computational Linguistics",
-pages     = "12286--12312",
-year      =  2022,
-doi       = "10.48550/arxiv.2210.15097"
-}
-
-@INPROCEEDINGS{su2022contrastive,
-title     = "A Contrastive Framework for Neural Text Generation",
-author    = "Su, Yixuan and Lan, Tian and Wang, Yan and Yogatama, Dani and Kong, Lingpeng and Collier, Nigel",
-booktitle = "Neural Information Processing Systems",
-volume    = "abs/2202.06417",
-year      =  2022,
-doi       = "10.52202/068431-1566"
-}
-
-@INPROCEEDINGS{vijayakumar2018diverse,
-title     = "Diverse Beam Search: Decoding Diverse Solutions from Neural Sequence Models",
-author    = "Vijayakumar, Ashwin K. and Cogswell, Michael and Selvaraju, Ramprasaath R. and Sun, Q. and Lee, Stefan and Crandall, David J. and Batra, Dhruv",
-booktitle = "Proceedings of the Thirty-Second AAAI Conference on Artificial Intelligence",
-volume    = "abs/1610.02424",
-year      =  2016,
-doi       = "10.48550/arxiv.1610.02424"
-}
-
-@INPROCEEDINGS{welleck2020neural,
-title     = "Neural Text Generation with Unlikelihood Training",
-author    = "Welleck, S. and Kulikov, Ilia and Roller, Stephen and Dinan, Emily and Cho, Kyunghyun and Weston, J.",
-booktitle = "International Conference on Learning Representations",
-volume    = "abs/1908.04319",
-year      =  2019,
-doi       = "10.48550/arxiv.1908.04319"
-}
-
-@INPROCEEDINGS{shaib2024diversity,
-title     = "Standardizing the Measurement of Text Diversity: A Tool and Comparative Analysis",
-author    = "Shaib, Chantal and Barrow, Joe and Sun, Jiuding and Siu, Alexa F. and Wallace, Byron C. and Nenkova, A.",
-booktitle = "Proceedings of IJCNLP-AACL 2025: System Demonstrations",
-year      =  2024,
-doi       = "10.18653/v1/2025.ijcnlp-demo.5"
-}
-
-@INPROCEEDINGS{shaib2024templates,
-title     = "Detection and Measurement of Syntactic Templates in Generated Text",
-author    = "Shaib, Chantal and Elazar, Yanai and Li, J. and Wallace, Byron C.",
-booktitle = "Conference on Empirical Methods in Natural Language Processing",
-pages     = "6416--6431",
-year      =  2024,
-doi       = "10.48550/arxiv.2407.00211"
-}
-
-
-@INPROCEEDINGS{li2016diversity,
-title     = "A Diversity-Promoting Objective Function for Neural Conversation Models",
-author    = "Li, Jiwei and Galley, Michel and Brockett, Chris and Gao, Jianfeng and Dolan, W.",
-booktitle = "North American Chapter of the Association for Computational Linguistics",
-volume    = "abs/1510.03055",
-year      =  2015,
-doi       = "10.18653/v1/n16-1014"
-}
-
-@INPROCEEDINGS{padmakumar2024contentdiversity,
-title     = "Does Writing with Language Models Reduce Content Diversity?",
-author    = "Padmakumar,  Vishakh and He,  He",
-booktitle = "International Conference on Learning Representations",
-volume    = "abs/2309.05196",
-year      =  2023,
-doi       = "10.48550/arxiv.2309.05196"
-}
-
-@ARTICLE{doshi2024generative,
-title   = "Generative {AI} Enhances Individual Creativity but Reduces the Collective Diversity of Novel Content",
-author  = "Doshi,  Anil R. and Hauser,  Oliver P.",
-journal = "Science Advances",
-volume  =  10,
-number  =  28,
-pages   = "eadn5290",
-year    =  2024,
-doi     = "10.1126/sciadv.adn5290",
-pmc     = "PMC11244532",
-pmid    =  38996021
-}
-
-@INPROCEEDINGS{anderson2024homogenization,
-title     = "Homogenization Effects of Large Language Models on Human Creative Ideation",
-author    = "Anderson, Barrett R and Shah, J. and Kreminski, Max",
-booktitle = "Creativity \& Cognition",
-year      =  2024,
-doi       = "10.1145/3635636.3656204"
-}
-
-@ARTICLE{sourati2025homogenizing,
-title       = "The Homogenizing Effect of Large Language Models on Human Expression and Thought",
-author      = "Sourati,  Zhivar and Ziabari,  Alireza S. and Dehghani,  Morteza",
-journal     = "arXiv preprint arXiv:2508. 01491",
-year        =  2025,
-eprint      = "2508.01491",
-doi         = "10.48550/arxiv.2508.01491",
-eprintclass = "cs.CL"
-}
-
-@ARTICLE{gemma2024,
-title       = "Gemma: Open Models Based on {G}emini Research and Technology",
-author      = "{Gemma Team: Thomas Mesnard} and Hardin, Cassidy and Dadashi, Robert and Bhupatiraju, Surya and Pathak, Shreya and Sifre, Laurent and Rivi\`{e}re, Morgane and Kale, Mihir Sanjay and Love, Juliette and Tafti, Pouya and Hussenot, L\'{e}onard and Sessa, Pier Giuseppe and Chowdhery, Aakanksha and Roberts, Adam and Barua, Aditya and Botev, Alex and Castro-Ros, Alex and Slone, Ambrose and H\'{e}liou, Am\'{e}lie and Tacchetti, Andrea and Bulanova, Anna and Paterson, Antonia and Tsai, Beth and Shahriari, Bobak and Le Lan, Charline and Choquette-Choo, Christopher A and Crepy, Cl\'{e}ment and Cer, Daniel and Ippolito, Daphne and Reid, David and Buchatskaya, Elena and Ni, Eric and Noland, Eric and Yan, Geng and Tucker, George and Muraru, George-Christian and Rozhdestvenskiy, Grigory and Michalewski, Henryk and Tenney, Ian and Grishchenko, Ivan and Austin, Jacob and Keeling, James and Labanowski, Jane and Lespiau, Jean-Baptiste and Stanway, Jeff and Brennan, Jenny and Chen, Jeremy and Ferret, Johan and Chiu, Justin and Mao-Jones, Justin and Lee, Katherine and Yu, Kathy and Millican, Katie and Sjoesund, Lars Lowe and Lee, Lisa and Dixon, Lucas and Reid, Machel and Miku\l{}a, Maciej and Wirth, Mateo and Sharman, Michael and Chinaev, Nikolai and Thain, Nithum and Bachem, Olivier and Chang, Oscar and Wahltinez, Oscar and Bailey, Paige and Michel, Paul and Yotov, Petko and Chaabouni, Rahma and Comanescu, Ramona and Jana, Reena and Anil, Rohan and McIlroy, Ross and Liu, Ruibo and Mullins, Ryan and Smith, Samuel L and Borgeaud, Sebastian and Girgin, Sertan and Douglas, Sholto and Pandya, Shree and Shakeri, Siamak and De, Soham and Klimenko, Ted and Hennigan, Tom and Feinberg, Vlad and Stokowiec, Wojciech and Chen, Yu-Hui and Ahmed, Zafarali and Gong, Zhitao and Warkentin, Tris and Peran, Ludovic and Giang, Minh and Farabet, Cl\'{e}ment and Vinyals, Oriol and Dean, Jeff and Kavukcuoglu, Koray and Hassabis, Demis and Ghahramani, Zoubin and Eck, Douglas and Barral, Joelle and Pereira, Fernando and Collins, Eli and Joulin, Armand and Fiedel, Noah and Senter, Evan and Andreev, Alek and Kenealy, Kathleen",
-journal     = "arXiv preprint arXiv:2403. 08295",
-year        =  2024,
-eprint      = "2403.08295",
-doi         = "10.48550/arxiv.2403.08295",
-eprintclass = "cs.CL"
-}
-
-@ARTICLE{touvron2023llama2,
-title       = "Llama 2: Open Foundation and Fine-Tuned Chat Models",
-author      = "Touvron, Hugo and Martin, Louis and Stone, Kevin and Albert, Peter and Almahairi, Amjad and Babaei, Yasmine and Bashlykov, Nikolay and Batra, Soumya and Bhargava, Prajjwal and Bhosale, Shruti and Bikel, Dan and Blecher, Lukas and Ferrer, Cristian Canton and Chen, Moya and Cucurull, Guillem and Esiobu, David and Fernandes, Jude and Fu, Jeremy and Fu, Wenyin and Fuller, Brian and Gao, Cynthia and Goswami, Vedanuj and Goyal, Naman and Hartshorn, Anthony and Hosseini, Saghar and Hou, Rui and Inan, Hakan and Kardas, Marcin and Kerkez, Viktor and Khabsa, Madian and Kloumann, Isabel and Korenev, Artem and Koura, Punit Singh and Lachaux, Marie-Anne and Lavril, Thibaut and Lee, Jenya and Liskovich, Diana and Lu, Yinghai and Mao, Yuning and Martinet, Xavier and Mihaylov, Todor and Mishra, Pushkar and Molybog, Igor and Nie, Yixin and Poulton, Andrew and Reizenstein, Jeremy and Rungta, Rashi and Saladi, Kalyan and Schelten, Alan and Silva, Ruan and Smith, Eric Michael and Subramanian, Ranjan and Tan, Xiaoqing Ellen and Tang, Binh and Taylor, Ross and Williams, Adina and Kuan, Jian Xiang and Xu, Puxin and Yan, Zheng and Zarov, Iliyan and Zhang, Yuchen and Fan, Angela and Kambadur, Melanie and Narang, Sharan and Rodriguez, Aurelien and Stojnic, Robert and Edunov, Sergey and Scialom, Thomas",
-journal     = "arXiv preprint arXiv:2307. 09288",
-year        =  2023,
-eprint      = "2307.09288",
-doi         = "10.48550/arxiv.2307.09288",
-eprintclass = "cs.CL"
-}
-
-@ARTICLE{ackley1985learning,
-title   = "A Learning Algorithm for {B}oltzmann Machines",
-author  = "Ackley, D. and Hinton, Geoffrey E. and Sejnowski, T.",
-journal = "Cogn. Sci.",
-volume  =  9,
-number  =  1,
-pages   = "147--169",
-year    =  1985,
-doi     = "10.1016/b978-0-08-051581-6.50053-2"
-}
-
-@INPROCEEDINGS{zhang2021trading,
-title     = "Trading Off Diversity and Quality in Natural Language Generation",
-author    = "Zhang,  Hugh and Duckworth,  Daniel and Ippolito,  Daphne and Neelakantan,  Arvind",
-booktitle = "Proceedings of the Workshop on Human Evaluation of NLP Systems",
-volume    = "abs/2004.10450",
-year      =  2020,
-doi       = "10.48550/arxiv.2004.10450"
-}
-
-@ARTICLE{renze2024effect,
-title   = "The Effect of Sampling Temperature on Problem Solving in Large Language Models",
-author  = "Renze,  Matthew and Guven,  Erhan",
-journal = "arXiv preprint arXiv:2402. 05201",
-volume  = "abs/2402.05201",
-year    =  2024,
-doi     = "10.18653/v1/2024.findings-emnlp.432"
-}
-
-@BOOK{cover2006elements,
-title     = "Elements of Information Theory",
-author    = "Cover,  Thomas M. and Thomas,  Joy A.",
-publisher = "John Wiley \& Sons",
-address   = "Nashville, TN",
-edition   =  2,
-month     =  "28~" # nov,
-year      =  2012,
-doi       = "10.1002/047174882x",
-isbn      =  9780471241959
-}
-
-@ARTICLE{csiszar1975divergence,
-title   = "I-Divergence Geometry of Probability Distributions and Minimization Problems",
-author  = "Csiszar, I",
-journal = "Ann. Probab.",
-volume  =  3,
-number  =  1,
-pages   = "146--158",
-year    =  1975,
-doi     = "10.1214/aop/1176996454"
-}
-
-@ARTICLE{keskar2019ctrl,
-title       = "{CTRL}: A Conditional Transformer Language Model for Controllable Generation",
-author      = "Keskar,  Nitish Shirish and McCann,  Bryan and Varshney,  Lav R. and Xiong,  Caiming and Socher,  Richard",
-journal     = "arXiv preprint arXiv:1909. 05858",
-year        =  2019,
-eprint      = "1909.05858",
-doi         = "10.48550/arxiv.1909.05858",
-eprintclass = "cs.CL"
-}
-
-@INPROCEEDINGS{fu2021theoretical,
-title     = "A Theoretical Analysis of the Repetition Problem in Text Generation",
-author    = "Fu, Zihao and Lam, Wai and So, A. M. and Shi, Bei",
-booktitle = "AAAI Conference on Artificial Intelligence",
-volume    =  35,
-pages     = "12848--12856",
-year      =  2020,
-doi       = "10.1609/aaai.v35i14.17520"
-}
-
-@INPROCEEDINGS{zhu2018texygen,
-title     = "Texygen: A Benchmarking Platform for Text Generation Models",
-author    = "Zhu,  Yaoming and Lu,  Sidi and Zheng,  Lei and Guo,  Jiaxian and Zhang,  Weinan and Wang,  Jun and Yu,  Yong",
-booktitle = "Annual International ACM SIGIR Conference on Research and Development in Information Retrieval",
-year      =  2018,
-doi       = "10.1145/3209978.3210080"
-}
-
-@INPROCEEDINGS{pillutla2021mauve,
-title     = "{MAUVE}: Measuring the Gap Between Neural Text and Human Text using Divergence Frontiers",
-author    = "Pillutla, Krishna and Swayamdipta, Swabha and Zellers, Rowan and Thickstun, John and Welleck, S. and Choi, Yejin and Harchaoui, Z.",
-booktitle = "Neural Information Processing Systems",
-pages     = "4816--4828",
-year      =  2021,
-doi       = "10.48550/arxiv.2102.01454"
-}
-
-@ARTICLE{yuan2022wordcraft,
-title   = "Wordcraft: Story Writing With Large Language Models",
-author  = "Yuan,  Ann and Coenen,  Andy and Reif,  Emily and Ippolito,  Daphne",
-journal = "arXiv preprint arXiv:2107. 07430",
-year    =  2022,
-doi     = "10.1145/3490099.3511105"
-}
-
-@ARTICLE{ippolito2023creative,
-title       = "Creative Writing with an {AI}-Powered Writing Assistant: Perspectives from Professional Writers",
-author      = "Ippolito,  Daphne and Yuan,  Ann and Coenen,  Andy and Burnam,  Sehmon",
-journal     = "arXiv preprint arXiv:2211. 05030",
-month       =  "9~" # nov,
-year        =  2022,
-eprint      = "2211.05030",
-doi         = "10.48550/arxiv.2211.05030",
-eprintclass = "cs.HC"
-}
-
-@INPROCEEDINGS{kirk2024understanding,
-title     = "Understanding the Effects of {RLHF} on {LLM} Generalisation and Diversity",
-author    = "Kirk, Robert and Mediratta, Ishita and Nalmpantis, Christoforos and Luketina, Jelena and Hambro, Eric and Grefenstette, Edward and Raileanu, R.",
-booktitle = "International Conference on Learning Representations",
-volume    = "abs/2310.06452",
-year      =  2023,
-doi       = "10.48550/arxiv.2310.06452"
-}
-
-@INPROCEEDINGS{dettmers2022gptq,
-title     = "{GPTQ}: Accurate Post-Training Quantization for Generative Pre-Trained Transformers",
-author    = "Frantar, Elias and Ashkboos, Saleh and Hoefler, T. and Alistarh, Dan",
-booktitle = "International Conference on Learning Representations (ICLR)",
-volume    = "abs/2210.17323",
-year      =  2022,
-doi       = "10.48550/arxiv.2210.17323"
-}
-
-@INPROCEEDINGS{papineni2002bleu,
-title     = "{BLEU}: A Method for Automatic Evaluation of Machine Translation",
-author    = "Papineni, Kishore and Roukos, Salim and Ward, T. and Zhu, Wei-Jing",
-booktitle = "Annual Meeting of the Association for Computational Linguistics",
-pages     = "311--318",
-year      =  2002,
-doi       = "10.3115/1073083.1073135"
-}
-
-@INPROCEEDINGS{lin2004rouge,
-title     = "{ROUGE}: A Package for Automatic Evaluation of Summaries",
-author    = "Lin,  Chin-Yew",
-booktitle = "Annual Meeting of the Association for Computational Linguistics",
-pages     = "74--81",
-year      =  2004
-}
-
-@INPROCEEDINGS{leviathan2023fast,
-title     = "Fast Inference from Transformers via Speculative Decoding",
-author    = "Leviathan,  Yaniv and Kalman,  Matan and Matias,  Yossi",
-booktitle = "International Conference on Machine Learning",
-pages     = "19274--19286",
-year      =  2022,
-doi       = "10.48550/arxiv.2211.17192"
-}
-
-@INPROCEEDINGS{vaswani2017attention,
-title     = "Attention Is All You Need",
-author    = "Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N. and Kaiser, Lukasz and Polosukhin, I.",
-booktitle = "Neural Information Processing Systems",
-pages     = "5998--6008",
-year      =  2017,
-doi       = "10.48550/arxiv.1706.03762"
-}
-
-@INPROCEEDINGS{brown2020language,
-title     = "Language Models are Few-Shot Learners",
-author    = "Brown, Tom B. and Mann, Benjamin and Ryder, Nick and Subbiah, Melanie and Kaplan, J. and Dhariwal, Prafulla and Neelakantan, Arvind and Shyam, Pranav and Sastry, G. and Askell, Amanda and Agarwal, S. and Herbert-Voss, Ariel and Krueger, Gretchen and Henighan, T. and Child, R. and Ramesh, A. and Ziegler, Daniel M. and Wu, Jeff and Winter, Clemens and Hesse, Christopher and Chen, Mark and Sigler, Eric and Litwin, Ma-teusz and Gray, Scott and Chess, Benjamin and Clark, Jack and Berner, Christopher and McCandlish, Sam and Radford, Alec and Sutskever, I. and Amodei, Dario",
-booktitle = "Neural Information Processing Systems",
-volume    = "abs/2005.14165",
-year      =  2020,
-doi       = "10.48550/arxiv.2005.14165"
-}
-
-@ARTICLE{radford2019language,
-title   = "Language Models are Unsupervised Multitask Learners",
-author  = "Radford, Alec and Wu, Jeff and Child, R. and Luan, D. and Amodei, Dario and Sutskever, I.",
-journal = "OpenAI Technical Report",
-year    =  2019
-}
-
-@ARTICLE{touvron2023llama,
-title       = "{LLaMA}: Open and Efficient Foundation Language Models",
-author      = "Touvron, Hugo and Lavril, Thibaut and Izacard, Gautier and Martinet, Xavier and Lachaux, Marie-Anne and Lacroix, Timoth\'{e}e and Rozi\`{e}re, Baptiste and Goyal, Naman and Hambro, Eric and Azhar, Faisal and Rodriguez, Aurelien and Joulin, Armand and Grave, Edouard and Lample, Guillaume",
-journal     = "arXiv preprint arXiv:2302. 13971",
-year        =  2023,
-eprint      = "2302.13971",
-doi         = "10.48550/arxiv.2302.13971",
-eprintclass = "cs.CL"
-}
-
-@ARTICLE{bengio2003neural,
-title   = "A Neural Probabilistic Language Model",
-author  = "Bengio, Yoshua and Ducharme, R\'{e}jean and Vincent, Pascal and Janvin, Christian",
-journal = "Journal of Machine Learning Research",
-volume  =  3,
-pages   = "932--938",
-year    =  2003
-}
-
-@ARTICLE{shannon1948mathematical,
-title   = "A Mathematical Theory of Communication",
-author  = "Shannon, C E",
-journal = "ACM SIGMOBILE Mob. Comput. Commun. Rev.",
-volume  =  5,
-number  =  1,
-pages   = "3--55",
-month   =  jan,
-year    =  2001,
-doi     = "10.1145/584091.584093"
-}
-
-@INPROCEEDINGS{ouyang2022training,
-title     = "Training Language Models to Follow Instructions with Human Feedback",
-author    = "Ouyang, Long and Wu, Jeff and Jiang, Xu and Almeida, Diogo and Wainwright, Carroll L. and Mishkin, Pamela and Zhang, Chong and Agarwal, S. and Slama, Katarina and Ray, Alex and Schulman, John and Hilton, Jacob and Kelton, Fraser and Miller, Luke E. and Simens, M. and Askell, Amanda and Welinder, Peter and Christiano, P. and Leike, Jan and Lowe, Ryan J.",
-booktitle = "Neural Information Processing Systems",
-volume    = "abs/2203.02155",
-year      =  2022,
-doi       = "10.52202/068431-2011"
-}
-
-@ARTICLE{bai2022training,
-title       = "Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback",
-author      = "Bai, Yuntao and Jones, Andy and Ndousse, Kamal and Askell, Amanda and Chen, Anna and DasSarma, Nova and Drain, Dawn and Fort, Stanislav and Ganguli, Deep and Henighan, Tom and Joseph, Nicholas and Kadavath, Saurav and Kernion, Jackson and Conerly, Tom and El-Showk, Sheer and Elhage, Nelson and Hatfield-Dodds, Zac and Hernandez, Danny and Hume, Tristan and Johnston, Scott and Kravec, Shauna and Lovitt, Liane and Nanda, Neel and Olsson, Catherine and Amodei, Dario and Brown, Tom and Clark, Jack and McCandlish, Sam and Olah, Chris and Mann, Ben and Kaplan, Jared",
-journal     = "arXiv preprint arXiv:2204. 05862",
-year        =  2022,
-eprint      = "2204.05862",
-doi         = "10.48550/arxiv.2204.05862",
-eprintclass = "cs.CL"
-}
-
-@ARTICLE{deepseek2025r1,
-title       = "{DeepSeek-R1}: Incentivizing Reasoning Capability in {LLMs} via Reinforcement Learning",
-author      = "{DeepSeek-AI} and Guo, Daya and Yang, Dejian and Zhang, Haowei and Song, Junxiao and Wang, Peiyi and Zhu, Qihao and Xu, Runxin and Zhang, Ruoyu and Ma, Shirong and Bi, Xiao and Zhang, Xiaokang and Yu, Xingkai and Wu, Yu and Wu, Z F and Gou, Zhibin and Shao, Zhihong and Li, Zhuoshu and Gao, Ziyi and Liu, Aixin and Xue, Bing and Wang, Bingxuan and Wu, Bochao and Feng, Bei and Lu, Chengda and Zhao, Chenggang and Deng, Chengqi and Zhang, Chenyu and Ruan, Chong and Dai, Damai and Chen, Deli and Ji, Dongjie and Li, Erhang and Lin, Fangyun and Dai, Fucong and Luo, Fuli and Hao, Guangbo and Chen, Guanting and Li, Guowei and Zhang, H and Bao, Han and Xu, Hanwei and Wang, Haocheng and Ding, Honghui and Xin, Huajian and Gao, Huazuo and Qu, Hui and Li, Hui and Guo, Jianzhong and Li, Jiashi and Wang, Jiawei and Chen, Jingchang and Yuan, Jingyang and Qiu, Junjie and Li, Junlong and Cai, J L and Ni, Jiaqi and Liang, Jian and Chen, Jin and Dong, Kai and Hu, Kai and Gao, Kaige and Guan, Kang and Huang, Kexin and Yu, Kuai and Wang, Lean and Zhang, Lecong and Zhao, Liang and Wang, Litong and Zhang, Liyue and Xu, Lei and Xia, Leyi and Zhang, Mingchuan and Zhang, Minghua and Tang, Minghui and Li, Meng and Wang, Miaojun and Li, Mingming and Tian, Ning and Huang, Panpan and Zhang, Peng and Wang, Qiancheng and Chen, Qinyu and Du, Qiushi and Ge, Ruiqi and Zhang, Ruisong and Pan, Ruizhe and Wang, Runji and Chen, R J and Jin, R L and Chen, Ruyi and Lu, Shanghao and Zhou, Shangyan and Chen, Shanhuang and Ye, Shengfeng and Wang, Shiyu and Yu, Shuiping and Zhou, Shunfeng and Pan, Shuting and Li, S S and Zhou, Shuang and Wu, Shaoqing and Ye, Shengfeng and Yun, Tao and Pei, Tian and Sun, Tianyu and Wang, T and Zeng, Wangding and Zhao, Wanjia and Liu, Wen and Liang, Wenfeng and Gao, Wenjun and Yu, Wenqin and Zhang, Wentao and Xiao, W L and An, Wei and Liu, Xiaodong and Wang, Xiaohan and Chen, Xiaokang and Nie, Xiaotao and Cheng, Xin and Liu, Xin and Xie, Xin and Liu, Xingchao and Yang, Xinyu and Li, Xinyuan and Su, Xuecheng and Lin, Xuheng and Li, X Q and Jin, Xiangyue and Shen, Xiaojin and Chen, Xiaosha and Sun, Xiaowen and Wang, Xiaoxiang and Song, Xinnan and Zhou, Xinyi and Wang, Xianzu and Shan, Xinxia and Li, Y K and Wang, Y Q and Wei, Y X and Zhang, Yang and Xu, Yanhong and Li, Yao and Zhao, Yao and Sun, Yaofeng and Wang, Yaohui and Yu, Yi and Zhang, Yichao and Shi, Yifan and Xiong, Yiliang and He, Ying and Piao, Yishi and Wang, Yisong and Tan, Yixuan and Ma, Yiyang and Liu, Yiyuan and Guo, Yongqiang and Ou, Yuan and Wang, Yuduan and Gong, Yue and Zou, Yuheng and He, Yujia and Xiong, Yunfan and Luo, Yuxiang and You, Yuxiang and Liu, Yuxuan and Zhou, Yuyang and Zhu, Y X and Xu, Yanhong and Huang, Yanping and Li, Yaohui and Zheng, Yi and Zhu, Yuchen and Ma, Yunxian and Tang, Ying and Zha, Yukun and Yan, Yuting and Ren, Z Z and Ren, Zehui and Sha, Zhangli and Fu, Zhe and Xu, Zhean and Xie, Zhenda and Zhang, Zhengyan and Hao, Zhewen and Ma, Zhicheng and Yan, Zhigang and Wu, Zhiyu and Gu, Zihui and Zhu, Zijia and Liu, Zijun and Li, Zilin and Xie, Ziwei and Song, Ziyang and Pan, Zizheng and Huang, Zhen and Xu, Zhipeng and Zhang, Zhongyu and Zhang, Zhen",
-journal     = "arXiv preprint arXiv:2501. 12948",
-year        =  2025,
-eprint      = "2501.12948",
-doi         = "10.48550/arxiv.2501.12948",
-eprintclass = "cs.CL"
-}
-
-@INPROCEEDINGS{chuang2023dola,
-title     = "{DoLa}: Decoding by Contrasting Layers Improves Factuality in Large Language Models",
-author    = "Chuang, Yung-Sung and Xie, Yujia and Luo, Hongyin and Kim, Yoon and Glass, James R. and He, Pengcheng",
-booktitle = "International Conference on Learning Representations",
-volume    = "abs/2309.03883",
-year      =  2023,
-doi       = "10.48550/arxiv.2309.03883"
-}
-
-@misc{zhang2020bertscoreevaluatingtextgeneration,
-      title={BERTScore: Evaluating Text Generation with BERT}, 
-      author={Tianyi Zhang and Varsha Kishore and Felix Wu and Kilian Q. Weinberger and Yoav Artzi},
-      year={2020},
-      eprint={1904.09675},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/1904.09675}, 
-}
-
-@INPROCEEDINGS{qin2022cold,
-title     = "{COLD} Decoding: Energy-based Constrained Text Generation with {L}angevin Dynamics",
-author    = "Qin, Lianhui and Welleck, S. and Khashabi, Daniel and Choi, Yejin",
-booktitle = "Neural Information Processing Systems",
-volume    = "abs/2202.11705",
-year      =  2022,
-doi       = "10.52202/068431-0693"
-}
-
-@ARTICLE{wiher2022decoding,
-title   = "On Decoding Strategies for Neural Text Generators",
-author  = "Wiher, Gian and Meister, Clara and Cotterell, Ryan",
-journal = "Transactions of the Association for Computational Linguistics",
-volume  =  10,
-pages   = "997--1012",
-year    =  2022,
-doi     = "10.1162/tacl\_a\_00502"
-}
-
-@ARTICLE{celikyilmaz2020evaluation,
-title       = "Evaluation of Text Generation: A Survey",
-author      = "Celikyilmaz,  Asli and Clark,  Elizabeth and Gao,  Jianfeng",
-journal     = "arXiv preprint arXiv:2006. 14799",
-year        =  2020,
-eprint      = "2006.14799",
-doi         = "10.48550/arxiv.2006.14799",
-eprintclass = "cs.CL"
-}
-
-@INPROCEEDINGS{hashimoto2019unifying,
-title     = "Unifying Human and Statistical Evaluation for Natural Language Generation",
-author    = "Hashimoto, Tatsunori B. and Zhang, Hugh and Liang, Percy",
-booktitle = "North American Chapter of the Association for Computational Linguistics",
-pages     = "1689--1701",
-year      =  2019,
-doi       = "10.18653/v1/n19-1169"
-}
-
-@INPROCEEDINGS{zhang2020bertscore,
-title     = "{BERT}Score: Evaluating Text Generation with {BERT}",
-author    = "Zhang,  Tianyi and Kishore,  Varsha and Wu,  Felix and Weinberger,  Kilian Q. and Artzi,  Yoav",
-booktitle = "International Conference on Learning Representations",
-volume    = "abs/1904.09675",
-year      =  2019,
-doi       = "10.48550/arxiv.1904.09675"
-}
-
-@ARTICLE{gatt2018survey,
-title   = "Survey of the State of the Art in Natural Language Generation: Core Tasks, Applications and Evaluation",
-author  = "Gatt,  Albert and Krahmer,  Emiel",
-journal = "J. Artif. Intell. Res.",
-volume  =  61,
-pages   = "65--170",
-year    =  2018,
-doi     = "10.1613/jair.5477"
-}
-
-@ARTICLE{minaee2024large,
-title       = "Large Language Models: A Survey",
-author      = "Minaee,  Shervin and Mikolov,  Tomas and Nikzad,  Narjes and Chenaghlu,  Meysam and Socher,  Richard and Amatriain,  Xavier and Gao,  Jianfeng",
-journal     = "arXiv preprint arXiv:2402. 06196",
-year        =  2024,
-eprint      = "2402.06196",
-doi         = "10.48550/arxiv.2402.06196",
-eprintclass = "cs.CL"
-}
-
-@ARTICLE{zhao2023survey,
-title   = "A Survey of Large Language Models",
-author  = "Zhao, Wayne Xin and Zhou, Kun and Li, Junyi and Tang, Tianyi and Dong, Zican and Hou, Yupeng and Zhang, Beichen and Min, Yingqian and Zhang, Junjie and Liu, Peiyu and Wang, Xiaolei and Du, Yifan and Yang, Chen and Chen, Yushuo and Chen, Zhipeng and Jiang, Jinhao and Ren, Ruiyang and Li, Yifan and Tang, Xinyu and Liu, Zikang and Hu, Yiwen and Nie, Jian-Yun and Wen, Ji-Rong",
-journal = "Front. Comput. Sci.",
-volume  =  20,
-number  =  12,
-month   =  dec,
-year    =  2026,
-doi     = "10.1007/s11704-026-60308-3"
-}
-
-@ARTICLE{li2022pretrained,
-title   = "Pre-trained Language Models for Text Generation: A Survey",
-author  = "Li,  Junyi and Tang,  Tianyi and Zhao,  Wayne Xin and Nie,  Jian-Yun and Wen,  Ji-Rong",
-journal = "ACM Computing Surveys",
-volume  =  56,
-number  =  9,
-pages   = "1--39",
-month   =  "31~" # oct,
-year    =  2024,
-doi     = "10.1145/3649449"
-}
-
-@INPROCEEDINGS{lee2022deduplicating,
-title     = "Deduplicating Training Data Makes Language Models Better",
-author    = "Lee, Katherine and Ippolito, Daphne and Nystrom, A. and Zhang, Chiyuan and Eck, D. and Callison-Burch, Chris and Carlini, Nicholas",
-booktitle = "Annual Meeting of the Association for Computational Linguistics",
-pages     = "8424--8445",
-year      =  2021,
-doi       = "10.18653/v1/2022.acl-long.577"
-}
-
-@INPROCEEDINGS{lin2024awq,
-title     = "AWQ: Activation-aware Weight Quantization for On-Device LLM Compression and Acceleration",
-author    = "Lin, Ji and Tang, Jiaming and Tang, Haotian and Yang, Shang and Dang, Xingyu and Han, Song",
-booktitle = "Conference on Machine Learning and Systems",
-volume    =  28,
-pages     = "12--17",
-year      =  2023,
-doi       = "10.1145/3714983.3714987"
-}
-
-@ARTICLE{kadavath2022language,
-title       = "Language models (mostly) know what they know",
-author      = "Kadavath, Saurav and Conerly, Tom and Askell, Amanda and Henighan, Tom and Drain, Dawn and Perez, Ethan and Schiefer, Nicholas and Hatfield-Dodds, Zac and DasSarma, Nova and Tran-Johnson, Eli and Johnston, Scott and El-Showk, Sheer and Jones, Andy and Elhage, Nelson and Hume, Tristan and Chen, Anna and Bai, Yuntao and Bowman, Sam and Fort, Stanislav and Ganguli, Deep and Hernandez, Danny and Jacobson, Josh and Kernion, Jackson and Kravec, Shauna and Lovitt, Liane and Ndousse, Kamal and Olsson, Catherine and Ringer, Sam and Amodei, Dario and Brown, Tom and Clark, Jack and Joseph, Nicholas and Mann, Ben and McCandlish, Sam and Olah, Chris and Kaplan, Jared",
-journal     = "arXiv preprint arXiv:2207. 05221",
-year        =  2022,
-eprint      = "2207.05221",
-doi         = "10.48550/arxiv.2207.05221",
-eprintclass = "cs.CL"
+@article{meister2023typical,
+  author  = {Meister, Clara and Pimentel, Tiago and Wiher, Gian and Cotterell, Ryan},
+  title   = {Locally Typical Sampling},
+  journal = {Transactions of the Association for Computational Linguistics},
+  volume  = {11},
+  pages   = {102--121},
+  year    = {2023}
 }
 
 @inproceedings{ICLR2025_afa5f124,
- author = {Nguyen, Minh and Baker, Andrew and Neo, Clement and Roush, Allen and Kirsch, Andreas and Shwartz-Ziv, Ravid},
- booktitle = {International Conference on Learning Representations},
- editor = {Y. Yue and A. Garg and N. Peng and F. Sha and R. Yu},
- pages = {70333--70366},
- title = {Turning Up the Heat: Min-p Sampling for Creative and Coherent LLM Outputs},
- url = {https://proceedings.iclr.cc/paper_files/paper/2025/file/afa5f124e36bed5cc2125067005d43f5-Paper-Conference.pdf},
- volume = {2025},
- year = {2025}
+  author    = {Nguyen, Minh Nhat and Baker, Andrew and Neo, Clement and Roush, Allen and Kirsch, Andreas and Shwartz-Ziv, Ravid},
+  title     = {Turning Up the Heat: Min-p Sampling for Creative and Coherent {LLM} Outputs},
+  booktitle = {International Conference on Learning Representations},
+  pages     = {70333--70366},
+  year      = {2025}
 }
 
-
-@INPROCEEDINGS{zheng2023judging,
-title     = "Judging {LLM}-as-a-Judge with {MT}-Bench and Chatbot Arena",
-author    = "Zheng, Lianmin and Chiang, Wei-Lin and Sheng, Ying and Zhuang, Siyuan and Wu, Zhanghao and Zhuang, Yonghao and Lin, Zi and Li, Zhuohan and Li, Dacheng and Xing, E. and Zhang, Haotong and Gonzalez, Joseph E. and Stoica, Ion",
-booktitle = "Neural Information Processing Systems",
-volume    = "abs/2306.05685",
-year      =  2023,
-doi       = "10.52202/075280-2020"
+@inproceedings{li2023contrastive,
+  author    = {Li, Xiang Lisa and Holtzman, Ari and Fried, Daniel and Liang, Percy and Eisner, Jason and Hashimoto, Tatsunori B. and Zettlemoyer, Luke and Lewis, Mike},
+  title     = {Contrastive Decoding: Open-Ended Text Generation as Optimization},
+  booktitle = {Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages     = {12286--12312},
+  year      = {2023}
 }
 
-@INPROCEEDINGS{chiang2023closer,
-title     = "Can Large Language Models Be an Alternative to Human Evaluations?",
-author    = "Chiang,  Cheng-Han and Lee,  Hung-yi",
-booktitle = "Annual Meeting of the Association for Computational Linguistics",
-pages     = "15607--15631",
-year      =  2023,
-doi       = "10.48550/arxiv.2305.01937"
+@inproceedings{su2022contrastive,
+  author    = {Su, Yixuan and Lan, Tian and Wang, Yan and Yogatama, Dani and Kong, Lingpeng and Collier, Nigel},
+  title     = {A Contrastive Framework for Neural Text Generation},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume    = {35},
+  pages     = {21548--21561},
+  year      = {2022}
 }
 
-@INPROCEEDINGS{dubois2024length,
-title     = "Length-Controlled {AlpacaEval}: A Simple Way to Debias Automatic Evaluators",
-author    = "Dubois, Yann and Galambosi, Bal'azs and Liang, Percy and Hashimoto, Tatsunori",
-booktitle = "Conference on Language Modeling (COLM)",
-volume    = "abs/2404.04475",
-year      =  2024,
-doi       = "10.48550/arxiv.2404.04475"
+@inproceedings{vijayakumar2018diverse,
+  author    = {Vijayakumar, Ashwin K. and Cogswell, Michael and Selvaraju, Ramprasaath R. and Sun, Qing and Lee, Stefan and Crandall, David J. and Batra, Dhruv},
+  title     = {Diverse Beam Search: Decoding Diverse Solutions from Neural Sequence Models},
+  booktitle = {Proceedings of the Thirty-Second {AAAI} Conference on Artificial Intelligence},
+  year      = {2018}
 }
 
-@INPROCEEDINGS{wang2024pandalm,
-title     = "{PandaLM}: An Automatic Evaluation Benchmark for {LLM} Instruction Tuning Optimization",
-author    = "Wang, Yidong and Yu, Zhuohao and Zeng, Zhengran and Yang, Linyi and Wang, Cunxiang and Chen, Hao and Jiang, Chaoya and Xie, Rui and Wang, Jindong and Xie, Xingxu and Ye, Wei and Zhang, Shikun and Zhang, Yue",
-booktitle = "International Conference on Learning Representations",
-volume    = "abs/2306.05087",
-year      =  2023,
-doi       = "10.48550/arxiv.2306.05087"
+@inproceedings{welleck2020neural,
+  author    = {Welleck, Sean and Kulikov, Ilia and Roller, Stephen and Dinan, Emily and Cho, Kyunghyun and Weston, Jason},
+  title     = {Neural Text Generation with Unlikelihood Training},
+  booktitle = {International Conference on Learning Representations},
+  year      = {2020}
 }
 
-@ARTICLE{li2024leveraging,
-title   = "Leveraging Large Language Models for {NLG} Evaluation: Advances and Challenges",
-author  = "Li,  Zhen and Xu,  Xiaohan and Shen,  Tao and Xu,  Can and Gu,  Jia-Chen and Lai,  Yuxuan and Tao,  Chongyang and Ma,  Shuai",
-journal = "arXiv preprint arXiv:2401. 07103",
-pages   = "16028--16045",
-year    =  2024,
-doi     = "10.18653/v1/2024.emnlp-main.896"
-}
-
-@ARTICLE{krippendorff2011computing,
-title   = "Computing {Krippendorff}'s Alpha-Reliability",
-author  = "Krippendorff, K.",
-journal = "Technical Report, University of Pennsylvania",
-year    =  2011
-}
-
-@ARTICLE{zhou2023instructionfollowing,
-title       = "Instruction-Following Evaluation for Large Language Models",
-author      = "Zhou,  Jeffrey and Lu,  Tianjian and Mishra,  Swaroop and Brahma,  Siddhartha and Basu,  Sujoy and Luan,  Yi and Zhou,  Denny and Hou,  Le",
-journal     = "arXiv preprint arXiv:2311. 07911",
-year        =  2023,
-eprint      = "2311.07911",
-doi         = "10.48550/arxiv.2311.07911",
-eprintclass = "cs.CL"
-}
-
-@misc{creative-writing-bench-v3,
-  author = {Samuel J Paech},
-  title = {EQ-Bench Creative Writing Benchmark v3},
-  year = {2025},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/EQ-bench/creative-writing-bench}}
+@inproceedings{chuang2023dola,
+  author    = {Chuang, Yung-Sung and Xie, Yujia and Luo, Hongyin and Kim, Yoon and Glass, James R. and He, Pengcheng},
+  title     = {{DoLa}: Decoding by Contrasting Layers Improves Factuality in Large Language Models},
+  booktitle = {International Conference on Learning Representations},
+  year      = {2024}
 }
 
 @inproceedings{Yang_2021,
-   title={{FUDGE}: Controlled Text Generation With Future Discriminators},
-   url={http://dx.doi.org/10.18653/v1/2021.naacl-main.276},
-   DOI={10.18653/v1/2021.naacl-main.276},
-   booktitle={Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
-   publisher={Association for Computational Linguistics},
-   author={Yang, Kevin and Klein, Dan},
-   year={2021},
-   pages={3511--3535} }
+  author    = {Yang, Kevin and Klein, Dan},
+  title     = {{FUDGE}: Controlled Text Generation With Future Discriminators},
+  booktitle = {Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
+  pages     = {3511--3535},
+  year      = {2021}
+}
+
+@inproceedings{qin2022cold,
+  author    = {Qin, Lianhui and Welleck, Sean and Khashabi, Daniel and Choi, Yejin},
+  title     = {{COLD} Decoding: Energy-Based Constrained Text Generation with {Langevin} Dynamics},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume    = {35},
+  year      = {2022}
+}
+
+@article{keskar2019ctrl,
+  author  = {Keskar, Nitish Shirish and McCann, Bryan and Varshney, Lav R. and Xiong, Caiming and Socher, Richard},
+  title   = {{CTRL}: A Conditional Transformer Language Model for Controllable Generation},
+  journal = {arXiv preprint arXiv:1909.05858},
+  year    = {2019}
+}
+
+@article{wiher2022decoding,
+  author  = {Wiher, Gian and Meister, Clara and Cotterell, Ryan},
+  title   = {On Decoding Strategies for Neural Text Generators},
+  journal = {Transactions of the Association for Computational Linguistics},
+  volume  = {10},
+  pages   = {997--1012},
+  year    = {2022}
+}
+
+@article{fu2021theoretical,
+  author  = {Fu, Zihao and Lam, Wai and So, Anthony Man-Cho and Shi, Bei},
+  title   = {A Theoretical Analysis of the Repetition Problem in Text Generation},
+  journal = {Proceedings of the {AAAI} Conference on Artificial Intelligence},
+  volume  = {35},
+  number  = {14},
+  pages   = {12848--12856},
+  year    = {2021}
+}
+
+@inproceedings{paech2026antislop,
+  author    = {Paech, Samuel and Roush, Allen and Goldfeder, Judah and Shwartz-Ziv, Ravid},
+  title     = {Antislop: A Comprehensive Framework for Identifying and Eliminating Repetitive Patterns in Language Models},
+  booktitle = {International Conference on Learning Representations},
+  pages     = {42490--42525},
+  year      = {2026}
+}
+
+@inproceedings{leviathan2023fast,
+  author    = {Leviathan, Yaniv and Kalman, Matan and Matias, Yossi},
+  title     = {Fast Inference from Transformers via Speculative Decoding},
+  booktitle = {Proceedings of the 40th International Conference on Machine Learning},
+  pages     = {19274--19286},
+  year      = {2023}
+}
+
+% ---------------------------------------------------------------------------
+% Diversity, homogenization, and creative writing
+% ---------------------------------------------------------------------------
+
+@inproceedings{li2016diversity,
+  author    = {Li, Jiwei and Galley, Michel and Brockett, Chris and Gao, Jianfeng and Dolan, Bill},
+  title     = {A Diversity-Promoting Objective Function for Neural Conversation Models},
+  booktitle = {Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
+  pages     = {110--119},
+  year      = {2016}
+}
+
+@inproceedings{shaib2024diversity,
+  author    = {Shaib, Chantal and Barrow, Joe and Sun, Jiuding and Siu, Alexa F. and Wallace, Byron C. and Nenkova, Ani},
+  title     = {Standardizing the Measurement of Text Diversity: A Tool and Comparative Analysis},
+  booktitle = {Proceedings of {IJCNLP-AACL} 2025: System Demonstrations},
+  year      = {2025}
+}
+
+@inproceedings{shaib2024templates,
+  author    = {Shaib, Chantal and Elazar, Yanai and Li, Junyi Jessy and Wallace, Byron C.},
+  title     = {Detection and Measurement of Syntactic Templates in Generated Text},
+  booktitle = {Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing},
+  pages     = {6416--6431},
+  year      = {2024}
+}
+
+@inproceedings{padmakumar2024contentdiversity,
+  author    = {Padmakumar, Vishakh and He, He},
+  title     = {Does Writing with Language Models Reduce Content Diversity?},
+  booktitle = {International Conference on Learning Representations},
+  year      = {2024}
+}
+
+@article{doshi2024generative,
+  author  = {Doshi, Anil R. and Hauser, Oliver P.},
+  title   = {Generative {AI} Enhances Individual Creativity but Reduces the Collective Diversity of Novel Content},
+  journal = {Science Advances},
+  volume  = {10},
+  number  = {28},
+  pages   = {eadn5290},
+  year    = {2024}
+}
+
+@inproceedings{anderson2024homogenization,
+  author    = {Anderson, Barrett R. and Shah, Jash Hemant and Kreminski, Max},
+  title     = {Homogenization Effects of Large Language Models on Human Creative Ideation},
+  booktitle = {Proceedings of the 16th Conference on Creativity \& Cognition},
+  year      = {2024}
+}
+
+@article{sourati2025homogenizing,
+  author  = {Sourati, Zhivar and Ziabari, Alireza S. and Dehghani, Morteza},
+  title   = {The Homogenizing Effect of Large Language Models on Human Expression and Thought},
+  journal = {arXiv preprint arXiv:2508.01491},
+  year    = {2025}
+}
+
+@inproceedings{yuan2022wordcraft,
+  author    = {Yuan, Ann and Coenen, Andy and Reif, Emily and Ippolito, Daphne},
+  title     = {Wordcraft: Story Writing With Large Language Models},
+  booktitle = {27th International Conference on Intelligent User Interfaces},
+  pages     = {841--852},
+  year      = {2022}
+}
+
+@article{ippolito2023creative,
+  author  = {Ippolito, Daphne and Yuan, Ann and Coenen, Andy and Burnam, Sehmon},
+  title   = {Creative Writing with an {AI}-Powered Writing Assistant: Perspectives from Professional Writers},
+  journal = {arXiv preprint arXiv:2211.05030},
+  year    = {2022}
+}
+
+@inproceedings{zhang2021trading,
+  author    = {Zhang, Hugh and Duckworth, Daniel and Ippolito, Daphne and Neelakantan, Arvind},
+  title     = {Trading Off Diversity and Quality in Natural Language Generation},
+  booktitle = {Proceedings of the Workshop on Human Evaluation of {NLP} Systems},
+  year      = {2021}
+}
+
+@inproceedings{kirk2024understanding,
+  author    = {Kirk, Robert and Mediratta, Ishita and Nalmpantis, Christoforos and Luketina, Jelena and Hambro, Eric and Grefenstette, Edward and Raileanu, Roberta},
+  title     = {Understanding the Effects of {RLHF} on {LLM} Generalisation and Diversity},
+  booktitle = {International Conference on Learning Representations},
+  year      = {2024}
+}
+
+@misc{creative-writing-bench-v3,
+  author       = {Paech, Samuel J.},
+  title        = {{EQ-Bench} Creative Writing Benchmark v3},
+  howpublished = {\url{https://github.com/EQ-bench/creative-writing-bench}},
+  year         = {2025},
+  note         = {GitHub repository}
+}
+
+% ---------------------------------------------------------------------------
+% Information theory
+% ---------------------------------------------------------------------------
+
+@article{shannon1948mathematical,
+  author  = {Shannon, Claude E.},
+  title   = {A Mathematical Theory of Communication},
+  journal = {The Bell System Technical Journal},
+  volume  = {27},
+  number  = {3},
+  pages   = {379--423},
+  year    = {1948}
+}
+
+@article{csiszar1975divergence,
+  author  = {Csisz{\'a}r, Imre},
+  title   = {{I}-Divergence Geometry of Probability Distributions and Minimization Problems},
+  journal = {The Annals of Probability},
+  volume  = {3},
+  number  = {1},
+  pages   = {146--158},
+  year    = {1975}
+}
+
+@book{cover2006elements,
+  author    = {Cover, Thomas M. and Thomas, Joy A.},
+  title     = {Elements of Information Theory},
+  publisher = {John Wiley \& Sons},
+  address   = {Hoboken, NJ},
+  edition   = {2nd},
+  year      = {2006}
+}
+
+@article{ackley1985learning,
+  author  = {Ackley, David H. and Hinton, Geoffrey E. and Sejnowski, Terrence J.},
+  title   = {A Learning Algorithm for {Boltzmann} Machines},
+  journal = {Cognitive Science},
+  volume  = {9},
+  number  = {1},
+  pages   = {147--169},
+  year    = {1985}
+}
+
+% ---------------------------------------------------------------------------
+% Language models
+% ---------------------------------------------------------------------------
+
+@article{bengio2003neural,
+  author  = {Bengio, Yoshua and Ducharme, R{\'e}jean and Vincent, Pascal and Jauvin, Christian},
+  title   = {A Neural Probabilistic Language Model},
+  journal = {Journal of Machine Learning Research},
+  volume  = {3},
+  pages   = {1137--1155},
+  year    = {2003}
+}
+
+@inproceedings{vaswani2017attention,
+  author    = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N. and Kaiser, Lukasz and Polosukhin, Illia},
+  title     = {Attention Is All You Need},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume    = {30},
+  pages     = {5998--6008},
+  year      = {2017}
+}
+
+@article{radford2019language,
+  author  = {Radford, Alec and Wu, Jeffrey and Child, Rewon and Luan, David and Amodei, Dario and Sutskever, Ilya},
+  title   = {Language Models are Unsupervised Multitask Learners},
+  journal = {{OpenAI} Technical Report},
+  year    = {2019}
+}
+
+@inproceedings{brown2020language,
+  author    = {Brown, Tom B. and Mann, Benjamin and Ryder, Nick and Subbiah, Melanie and Kaplan, Jared and Dhariwal, Prafulla and Neelakantan, Arvind and Shyam, Pranav and Sastry, Girish and Askell, Amanda and others},
+  title     = {Language Models are Few-Shot Learners},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume    = {33},
+  pages     = {1877--1901},
+  year      = {2020}
+}
+
+@article{touvron2023llama,
+  author  = {Touvron, Hugo and Lavril, Thibaut and Izacard, Gautier and Martinet, Xavier and Lachaux, Marie-Anne and Lacroix, Timoth{\'e}e and Rozi{\`e}re, Baptiste and Goyal, Naman and Hambro, Eric and Azhar, Faisal and others},
+  title   = {{LLaMA}: Open and Efficient Foundation Language Models},
+  journal = {arXiv preprint arXiv:2302.13971},
+  year    = {2023}
+}
+
+@article{touvron2023llama2,
+  author  = {Touvron, Hugo and Martin, Louis and Stone, Kevin and Albert, Peter and Almahairi, Amjad and Babaei, Yasmine and Bashlykov, Nikolay and Batra, Soumya and Bhargava, Prajjwal and Bhosale, Shruti and others},
+  title   = {{Llama} 2: Open Foundation and Fine-Tuned Chat Models},
+  journal = {arXiv preprint arXiv:2307.09288},
+  year    = {2023}
+}
+
+@article{gemma2024,
+  author  = {Mesnard, Thomas and Hardin, Cassidy and Dadashi, Robert and Bhupatiraju, Surya and Pathak, Shreya and Sifre, Laurent and Rivi{\`e}re, Morgane and Kale, Mihir Sanjay and Love, Juliette and Tafti, Pouya and others},
+  title   = {{Gemma}: Open Models Based on {Gemini} Research and Technology},
+  journal = {arXiv preprint arXiv:2403.08295},
+  year    = {2024}
+}
+
+@article{deepseek2025r1,
+  author  = {{DeepSeek-AI} and Guo, Daya and Yang, Dejian and Zhang, Haowei and Song, Junxiao and Wang, Peiyi and Zhu, Qihao and Xu, Runxin and Zhang, Ruoyu and Ma, Shirong and others},
+  title   = {{DeepSeek-R1}: Incentivizing Reasoning Capability in {LLMs} via Reinforcement Learning},
+  journal = {arXiv preprint arXiv:2501.12948},
+  year    = {2025}
+}
+
+@inproceedings{ouyang2022training,
+  author    = {Ouyang, Long and Wu, Jeffrey and Jiang, Xu and Almeida, Diogo and Wainwright, Carroll L. and Mishkin, Pamela and Zhang, Chong and Agarwal, Sandhini and Slama, Katarina and Ray, Alex and others},
+  title     = {Training Language Models to Follow Instructions with Human Feedback},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume    = {35},
+  pages     = {27730--27744},
+  year      = {2022}
+}
+
+@article{bai2022training,
+  author  = {Bai, Yuntao and Jones, Andy and Ndousse, Kamal and Askell, Amanda and Chen, Anna and DasSarma, Nova and Drain, Dawn and Fort, Stanislav and Ganguli, Deep and Henighan, Tom and others},
+  title   = {Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback},
+  journal = {arXiv preprint arXiv:2204.05862},
+  year    = {2022}
+}
+
+@article{kadavath2022language,
+  author  = {Kadavath, Saurav and Conerly, Tom and Askell, Amanda and Henighan, Tom and Drain, Dawn and Perez, Ethan and Schiefer, Nicholas and Hatfield-Dodds, Zac and DasSarma, Nova and Tran-Johnson, Eli and others},
+  title   = {Language Models (Mostly) Know What They Know},
+  journal = {arXiv preprint arXiv:2207.05221},
+  year    = {2022}
+}
+
+@inproceedings{lee2022deduplicating,
+  author    = {Lee, Katherine and Ippolito, Daphne and Nystrom, Andrew and Zhang, Chiyuan and Eck, Douglas and Callison-Burch, Chris and Carlini, Nicholas},
+  title     = {Deduplicating Training Data Makes Language Models Better},
+  booktitle = {Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages     = {8424--8445},
+  year      = {2022}
+}
+
+% ---------------------------------------------------------------------------
+% Quantization
+% ---------------------------------------------------------------------------
+
+@inproceedings{dettmers2022gptq,
+  author    = {Frantar, Elias and Ashkboos, Saleh and Hoefler, Torsten and Alistarh, Dan},
+  title     = {{GPTQ}: Accurate Post-Training Quantization for Generative Pre-trained Transformers},
+  booktitle = {International Conference on Learning Representations},
+  year      = {2023}
+}
+
+@inproceedings{lin2024awq,
+  author    = {Lin, Ji and Tang, Jiaming and Tang, Haotian and Yang, Shang and Dang, Xingyu and Han, Song},
+  title     = {{AWQ}: Activation-Aware Weight Quantization for On-Device {LLM} Compression and Acceleration},
+  booktitle = {Proceedings of Machine Learning and Systems},
+  volume    = {6},
+  pages     = {87--100},
+  year      = {2024}
+}
+
+% ---------------------------------------------------------------------------
+% Evaluation
+% ---------------------------------------------------------------------------
+
+@inproceedings{papineni2002bleu,
+  author    = {Papineni, Kishore and Roukos, Salim and Ward, Todd and Zhu, Wei-Jing},
+  title     = {{BLEU}: A Method for Automatic Evaluation of Machine Translation},
+  booktitle = {Proceedings of the 40th Annual Meeting of the Association for Computational Linguistics},
+  pages     = {311--318},
+  year      = {2002}
+}
+
+@inproceedings{lin2004rouge,
+  author    = {Lin, Chin-Yew},
+  title     = {{ROUGE}: A Package for Automatic Evaluation of Summaries},
+  booktitle = {Text Summarization Branches Out},
+  pages     = {74--81},
+  year      = {2004}
+}
+
+@inproceedings{zhang2020bertscore,
+  author    = {Zhang, Tianyi and Kishore, Varsha and Wu, Felix and Weinberger, Kilian Q. and Artzi, Yoav},
+  title     = {{BERTScore}: Evaluating Text Generation with {BERT}},
+  booktitle = {International Conference on Learning Representations},
+  year      = {2020}
+}
+
+@inproceedings{pillutla2021mauve,
+  author    = {Pillutla, Krishna and Swayamdipta, Swabha and Zellers, Rowan and Thickstun, John and Welleck, Sean and Choi, Yejin and Harchaoui, Zaid},
+  title     = {{MAUVE}: Measuring the Gap Between Neural Text and Human Text using Divergence Frontiers},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume    = {34},
+  pages     = {4816--4828},
+  year      = {2021}
+}
+
+@inproceedings{zhu2018texygen,
+  author    = {Zhu, Yaoming and Lu, Sidi and Zheng, Lei and Guo, Jiaxian and Zhang, Weinan and Wang, Jun and Yu, Yong},
+  title     = {Texygen: A Benchmarking Platform for Text Generation Models},
+  booktitle = {The 41st International {ACM} {SIGIR} Conference on Research and Development in Information Retrieval},
+  pages     = {1097--1100},
+  year      = {2018}
+}
+
+@inproceedings{hashimoto2019unifying,
+  author    = {Hashimoto, Tatsunori B. and Zhang, Hugh and Liang, Percy},
+  title     = {Unifying Human and Statistical Evaluation for Natural Language Generation},
+  booktitle = {Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
+  pages     = {1689--1701},
+  year      = {2019}
+}
+
+@inproceedings{zheng2023judging,
+  author    = {Zheng, Lianmin and Chiang, Wei-Lin and Sheng, Ying and Zhuang, Siyuan and Wu, Zhanghao and Zhuang, Yonghao and Lin, Zi and Li, Zhuohan and Li, Dacheng and Xing, Eric and others},
+  title     = {Judging {LLM}-as-a-Judge with {MT-Bench} and {Chatbot Arena}},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume    = {36},
+  pages     = {46595--46623},
+  year      = {2023}
+}
+
+@inproceedings{chiang2023closer,
+  author    = {Chiang, Cheng-Han and Lee, Hung-yi},
+  title     = {Can Large Language Models Be an Alternative to Human Evaluations?},
+  booktitle = {Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages     = {15607--15631},
+  year      = {2023}
+}
+
+@inproceedings{dubois2024length,
+  author    = {Dubois, Yann and Galambosi, Bal{\'a}zs and Liang, Percy and Hashimoto, Tatsunori B.},
+  title     = {Length-Controlled {AlpacaEval}: A Simple Way to Debias Automatic Evaluators},
+  booktitle = {Conference on Language Modeling},
+  year      = {2024}
+}
+
+@inproceedings{wang2024pandalm,
+  author    = {Wang, Yidong and Yu, Zhuohao and Zeng, Zhengran and Yang, Linyi and Wang, Cunxiang and Chen, Hao and Jiang, Chaoya and Xie, Rui and Wang, Jindong and Xie, Xing and others},
+  title     = {{PandaLM}: An Automatic Evaluation Benchmark for {LLM} Instruction Tuning Optimization},
+  booktitle = {International Conference on Learning Representations},
+  year      = {2024}
+}
+
+@inproceedings{li2024leveraging,
+  author    = {Li, Zhen and Xu, Xiaohan and Shen, Tao and Xu, Can and Gu, Jia-Chen and Lai, Yuxuan and Tao, Chongyang and Ma, Shuai},
+  title     = {Leveraging Large Language Models for {NLG} Evaluation: Advances and Challenges},
+  booktitle = {Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing},
+  pages     = {16028--16045},
+  year      = {2024}
+}
+
+@inproceedings{renze2024effect,
+  author    = {Renze, Matthew and Guven, Erhan},
+  title     = {The Effect of Sampling Temperature on Problem Solving in Large Language Models},
+  booktitle = {Findings of the Association for Computational Linguistics: {EMNLP} 2024},
+  year      = {2024}
+}
+
+@article{zhou2023instructionfollowing,
+  author  = {Zhou, Jeffrey and Lu, Tianjian and Mishra, Swaroop and Brahma, Siddhartha and Basu, Sujoy and Luan, Yi and Zhou, Denny and Hou, Le},
+  title   = {Instruction-Following Evaluation for Large Language Models},
+  journal = {arXiv preprint arXiv:2311.07911},
+  year    = {2023}
+}
+
+@techreport{krippendorff2011computing,
+  author      = {Krippendorff, Klaus},
+  title       = {Computing {Krippendorff's} Alpha-Reliability},
+  institution = {Annenberg School for Communication, University of Pennsylvania},
+  year        = {2011}
+}
+
+% ---------------------------------------------------------------------------
+% Surveys
+% ---------------------------------------------------------------------------
+
+@article{gatt2018survey,
+  author  = {Gatt, Albert and Krahmer, Emiel},
+  title   = {Survey of the State of the Art in Natural Language Generation: Core Tasks, Applications and Evaluation},
+  journal = {Journal of Artificial Intelligence Research},
+  volume  = {61},
+  pages   = {65--170},
+  year    = {2018}
+}
+
+@article{celikyilmaz2020evaluation,
+  author  = {Celikyilmaz, Asli and Clark, Elizabeth and Gao, Jianfeng},
+  title   = {Evaluation of Text Generation: A Survey},
+  journal = {arXiv preprint arXiv:2006.14799},
+  year    = {2020}
+}
+
+@article{minaee2024large,
+  author  = {Minaee, Shervin and Mikolov, Tomas and Nikzad, Narjes and Chenaghlu, Meysam and Socher, Richard and Amatriain, Xavier and Gao, Jianfeng},
+  title   = {Large Language Models: A Survey},
+  journal = {arXiv preprint arXiv:2402.06196},
+  year    = {2024}
+}
+
+@article{zhao2023survey,
+  author  = {Zhao, Wayne Xin and Zhou, Kun and Li, Junyi and Tang, Tianyi and Dong, Zican and Hou, Yupeng and Zhang, Beichen and Min, Yingqian and Zhang, Junjie and Liu, Peiyu and others},
+  title   = {A Survey of Large Language Models},
+  journal = {arXiv preprint arXiv:2303.18223},
+  year    = {2023}
+}
+
+@article{li2022pretrained,
+  author  = {Li, Junyi and Tang, Tianyi and Zhao, Wayne Xin and Nie, Jian-Yun and Wen, Ji-Rong},
+  title   = {Pre-trained Language Models for Text Generation: A Survey},
+  journal = {{ACM} Computing Surveys},
+  volume  = {56},
+  number  = {9},
+  pages   = {1--39},
+  year    = {2024}
+}
