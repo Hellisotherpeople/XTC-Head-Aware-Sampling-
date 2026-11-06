@@ -1,11 +1,9 @@
 \documentclass{article}
 
-% Default: anonymous main-track submission mode.
-% For a named internal draft or arXiv version, switch to:
-% \usepackage[preprint]{neurips_2026}
-% For the final camera-ready version, switch to:
-% \usepackage[main, final]{neurips_2026}
-\usepackage[main]{neurips_2026}
+% Camera-ready copy. The anonymous submission is preserved in git history
+% (commit b92a882). For an anonymous build, switch to:
+% \usepackage[main]{neurips_2026}
+\usepackage[main, final]{neurips_2026}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -44,7 +42,29 @@
 
 \title{XTC: Head-Aware Sampling by Excluding Top Choices}
 
-\author{}
+% Dual first authorship: Weidmann and Roush contributed equally (*).
+% \And = same row, \AND = force a new row.
+\author{%
+  Philipp Emanuel Weidmann\thanks{Equal contribution.}\thanks{Proposed the \xtc{} sampling method and wrote its original implementation, which was merged into \texttt{text-generation-webui}. Implementations in other inference engines, including \texttt{llama.cpp}, were written by others (see Acknowledgments).} \\
+  Independent Researcher \\
+  \texttt{pew@worldwidemann.com} \\
+  \And
+  Allen G. Roush\footnotemark[1]\thanks{Designed and ran all experiments, evaluations, and statistical analysis.} \\
+  Thoughtworks \\
+  \texttt{allen.roush@thoughtworks.com} \\
+  \AND
+  Judah Goldfeder \\
+  Columbia University \\
+  \texttt{jag2396@columbia.edu} \\
+  \And
+  Sanjay Basu \\
+  Oracle \\
+  \texttt{sanjay.basu@oracle.com} \\
+  \And
+  Ravid Shwartz-Ziv \\
+  New York University \\
+  \texttt{ravid.shwartz.ziv@nyu.edu} \\
+}
 
 \begin{document}
 
@@ -363,6 +383,11 @@ Empirically, 60 experiments across four model families show that \xtc{} improves
 An Opus + GPT-4o cross-vendor LLM panel, a blinded AMT human study, and an IFEval characterization on Llama 3.3 70B q4 converge on the same finding: head-aware exclusion produces human-perceptible stylistic diversity at a fraction of the instruction-following cost paid by matched-Distinct-2 temperature scaling.
 Limitations, broader impacts, and practical safeguards appear in Appendix~\ref{sec:discussion}.
 
+\begin{ack}
+We thank MaggotHATE, who wrote the \texttt{llama.cpp} implementation of \xtc{}, and LostRuins, who added \xtc{} to KoboldCpp. We also thank oobabooga for reviewing and merging the original \texttt{text-generation-webui} implementation.
+This work was funded by Thoughtworks.
+\end{ack}
+
 \bibliographystyle{plainnat}
 \bibliography{refs}
 
@@ -588,7 +613,7 @@ For high-fidelity deployments, three safeguards are especially important.
 \subsection{Outlook}
 \xtc{} exposes a part of the decoding design space that is largely orthogonal to tail truncation and global entropy control: the head-ambiguity regime where the model is already uncertain among strong options but still defaults to the safest one.
 By formalizing this regime and providing an operator that targets it specifically, we hope to encourage further exploration of head-aware decoding strategies \citep{minaee2024large, zhao2023survey}.
-All code, evaluation infrastructure, and experimental configurations are publicly available at \url{<redacted for anonymity>}.
+All code, evaluation infrastructure, and experimental configurations are publicly available at \url{https://github.com/Hellisotherpeople/XTC-Head-Aware-Sampling-}.
 \FloatBarrier
 
 %% ----- D. Cross-model generalization ----------------------------
@@ -892,7 +917,7 @@ Baseline ($T{=}1.0$)             & 81.2 & n/a     & n/a     & n/a  \\
 Temperature ($T{=}1.15$)         & 72.4 & $-8.8$  & $+14.0$ & $0.63\times$ \\
 \bottomrule
 \end{tabular}
-\caption{IFEval prompt-level strict accuracy on Llama~3.3 70B q4. The final column is IFEval-points lost per percentage point of Distinct-2 gained: \xtc{} Medium pays $0.13$ IFEval points per Distinct-2 percentage gained, vs.\ $0.63$ for matched-Distinct-2 temperature scaling, a $\sim$5$\times$ ratio in favor of \xtc{}. Per-prompt 95\% bootstrap CIs on the four conditions are pending re-import of the per-prompt IFEval result CSVs from the GPU machine where the run was executed. The camera-ready will replace the point estimates here with $\widehat{p} \pm \mathrm{CI}_{95}$ entries.}
+\caption{IFEval prompt-level strict accuracy on Llama~3.3 70B q4. The final column is IFEval-points lost per percentage point of Distinct-2 gained: \xtc{} Medium pays $0.13$ IFEval points per Distinct-2 percentage gained, vs.\ $0.63$ for matched-Distinct-2 temperature scaling, a $\sim$5$\times$ ratio in favor of \xtc{}. All entries are point estimates from a single run per condition, and we do not report confidence intervals for this table. Gaps of a point or two between conditions should be read with that in mind.}
 \label{tab:ifeval}
 \end{table}
 
@@ -1128,7 +1153,7 @@ Judge & Condition & Overall & Creativity & Repetition & Fluency \\
 \item {\bf Open access to data and code}
     \item[] Question: Does the paper provide open access to the data and code, with sufficient instructions to faithfully reproduce the main experimental results, as described in supplemental material?
     \item[] Answer: \answerYes{}
-    \item[] Justification: We will release the experiment harness code, configuration files, prompt suites, and raw experiment outputs with the camera-ready version. The \xtc{} algorithm (Algorithm~\ref{alg:xtc}) is fully specified in the paper.
+    \item[] Justification: The experiment harness code, configuration files, prompt suites, and raw experiment outputs are available at \url{https://github.com/Hellisotherpeople/XTC-Head-Aware-Sampling-}. The \xtc{} algorithm (Algorithm~\ref{alg:xtc}) is fully specified in the paper.
 
 \item {\bf Experimental setting/details}
     \item[] Question: Does the paper specify all the training and test details necessary to understand the results?
@@ -1138,7 +1163,7 @@ Judge & Condition & Overall & Creativity & Repetition & Fluency \\
 \item {\bf Experiment statistical significance}
     \item[] Question: Does the paper report error bars suitably and correctly defined or other appropriate information about the statistical significance of the experiments?
     \item[] Answer: \answerYes{}
-    \item[] Justification: Diversity, Pareto, composition, ablation, and per-judge LLM panels report 95\% bootstrap confidence intervals (1500--2500 resampling trials). Cross-model Table~\ref{tab:crossmodel} reports paired-bootstrap CIs over per-prompt deltas. Statistical significance is assessed via paired permutation tests with 4000--6000 trials. The AMT human study reports two-sided binomial $p$-values and Fleiss' $\kappa$ inter-annotator agreement. The IFEval Table~\ref{tab:ifeval} currently reports point estimates only. Per-prompt 95\% bootstrap CIs are pending re-import of the per-prompt result CSVs from the GPU machine where the run was executed, and will appear in the camera-ready version.
+    \item[] Justification: Diversity, Pareto, composition, ablation, and per-judge LLM panels report 95\% bootstrap confidence intervals (1500--2500 resampling trials). Cross-model Table~\ref{tab:crossmodel} reports paired-bootstrap CIs over per-prompt deltas. Statistical significance is assessed via paired permutation tests with 4000--6000 trials. The AMT human study reports two-sided binomial $p$-values and Fleiss' $\kappa$ inter-annotator agreement. The one exception is the IFEval Table~\ref{tab:ifeval}, which reports point estimates from a single run per condition without confidence intervals. The table caption says so.
 
 \item {\bf Experiments compute resources}
     \item[] Question: For each experiment, does the paper provide sufficient information on the computer resources needed to reproduce the experiments?
@@ -1168,12 +1193,12 @@ Judge & Condition & Overall & Creativity & Repetition & Fluency \\
 \item {\bf New assets}
     \item[] Question: Are new assets introduced in the paper well documented and is the documentation provided alongside the assets?
     \item[] Answer: \answerYes{}
-    \item[] Justification: The \xtc{} algorithm is fully specified in Algorithm~\ref{alg:xtc}. Prompt suites, configuration files, and the experiment harness code will be released with documentation alongside the camera-ready version.
+    \item[] Justification: The \xtc{} algorithm is fully specified in Algorithm~\ref{alg:xtc}. Prompt suites, configuration files, and the experiment harness code are released with documentation at \url{https://github.com/Hellisotherpeople/XTC-Head-Aware-Sampling-}.
 
 \item {\bf Crowdsourcing and research with human subjects}
     \item[] Question: For crowdsourcing experiments and research with human subjects, does the paper include the full text of instructions given to participants and screenshots, if applicable, as well as details about compensation?
     \item[] Answer: \answerYes{}
-    \item[] Justification: The Amazon Mechanical Turk study (Section~\ref{sec:exp_human_eval}) used 150 Master-qualified annotators on 100 paired prompts ($n{=}300$ rating triples), compensated at \$15/hr. Annotators rated each blinded pair on two pre-registered axes (Creativity \& Interestingness, General Quality \& Fluency) with the order of A/B presentation randomized per pair. The full instruction text, rubric, and an anonymized worker-summary CSV will be released with the camera-ready version. Inter-annotator agreement is reported as Fleiss' $\kappa$ ($0.58$ creativity, $0.44$ quality) and significance via two-sided binomial tests.
+    \item[] Justification: The Amazon Mechanical Turk study (Section~\ref{sec:exp_human_eval}) used 150 Master-qualified annotators on 100 paired prompts ($n{=}300$ rating triples), compensated at \$15/hr. Annotators rated each blinded pair on two pre-registered axes (Creativity \& Interestingness, General Quality \& Fluency) with the order of A/B presentation randomized per pair. The full instruction text, rubric, and an anonymized worker-summary CSV are available at \url{https://github.com/Hellisotherpeople/XTC-Head-Aware-Sampling-}. Inter-annotator agreement is reported as Fleiss' $\kappa$ ($0.58$ creativity, $0.44$ quality) and significance via two-sided binomial tests.
 
 \item {\bf Institutional review board (IRB) approvals or equivalent for research with human subjects}
     \item[] Question: Does the paper describe potential risks incurred by study participants, whether such risks were disclosed to the subjects, and whether IRB approvals (or an equivalent) were obtained?

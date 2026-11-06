@@ -46,10 +46,9 @@
 \title{XTC: Head-Aware Sampling by Excluding Top Choices}
 
 % Dual first authorship: Weidmann and Roush contributed equally (*).
-% Order is fixed with the method's originator first.
 % \And = same row, \AND = force a new row.
 \author{%
-  Philipp Emanuel Weidmann\thanks{Equal contribution.}\thanks{Proposed the \xtc{} sampling method and wrote the original reference implementations, which were merged into \texttt{llama.cpp}, \texttt{text-generation-webui}, and other open-source inference engines.} \\
+  Philipp Emanuel Weidmann\thanks{Equal contribution.}\thanks{Proposed the \xtc{} sampling method and wrote its original implementation, which was merged into \texttt{text-generation-webui}. Implementations in other inference engines, including \texttt{llama.cpp}, were written by others (see Acknowledgments).} \\
   Independent Researcher \\
   \texttt{pew@worldwidemann.com} \\
   \And
@@ -387,6 +386,11 @@ Empirically, 60 experiments across four model families show that \xtc{} improves
 An Opus + GPT-4o cross-vendor LLM panel, a blinded AMT human study, and an IFEval characterization on Llama 3.3 70B q4 converge on the same finding: head-aware exclusion produces human-perceptible stylistic diversity at a fraction of the instruction-following cost paid by matched-Distinct-2 temperature scaling.
 Limitations, broader impacts, and practical safeguards appear in Appendix~\ref{sec:discussion}.
 
+\begin{ack}
+We thank MaggotHATE, who wrote the \texttt{llama.cpp} implementation of \xtc{}, and LostRuins, who added \xtc{} to KoboldCpp. We also thank oobabooga for reviewing and merging the original \texttt{text-generation-webui} implementation.
+This work was funded by Thoughtworks.
+\end{ack}
+
 \bibliographystyle{plainnat}
 \bibliography{refs}
 
@@ -612,7 +616,7 @@ For high-fidelity deployments, three safeguards are especially important.
 \subsection{Outlook}
 \xtc{} exposes a part of the decoding design space that is largely orthogonal to tail truncation and global entropy control: the head-ambiguity regime where the model is already uncertain among strong options but still defaults to the safest one.
 By formalizing this regime and providing an operator that targets it specifically, we hope to encourage further exploration of head-aware decoding strategies \citep{minaee2024large, zhao2023survey}.
-All code, evaluation infrastructure, and experimental configurations are publicly available at \url{<redacted for anonymity>}.
+All code, evaluation infrastructure, and experimental configurations are publicly available at \url{https://github.com/Hellisotherpeople/XTC-Head-Aware-Sampling-}.
 \FloatBarrier
 
 %% ----- D. Cross-model generalization ----------------------------
@@ -916,7 +920,7 @@ Baseline ($T{=}1.0$)             & 81.2 & n/a     & n/a     & n/a  \\
 Temperature ($T{=}1.15$)         & 72.4 & $-8.8$  & $+14.0$ & $0.63\times$ \\
 \bottomrule
 \end{tabular}
-\caption{IFEval prompt-level strict accuracy on Llama~3.3 70B q4. The final column is IFEval-points lost per percentage point of Distinct-2 gained: \xtc{} Medium pays $0.13$ IFEval points per Distinct-2 percentage gained, vs.\ $0.63$ for matched-Distinct-2 temperature scaling, a $\sim$5$\times$ ratio in favor of \xtc{}. Per-prompt 95\% bootstrap CIs on the four conditions are pending re-import of the per-prompt IFEval result CSVs from the GPU machine where the run was executed. The camera-ready will replace the point estimates here with $\widehat{p} \pm \mathrm{CI}_{95}$ entries.}
+\caption{IFEval prompt-level strict accuracy on Llama~3.3 70B q4. The final column is IFEval-points lost per percentage point of Distinct-2 gained: \xtc{} Medium pays $0.13$ IFEval points per Distinct-2 percentage gained, vs.\ $0.63$ for matched-Distinct-2 temperature scaling, a $\sim$5$\times$ ratio in favor of \xtc{}. All entries are point estimates from a single run per condition, and we do not report confidence intervals for this table. Gaps of a point or two between conditions should be read with that in mind.}
 \label{tab:ifeval}
 \end{table}
 

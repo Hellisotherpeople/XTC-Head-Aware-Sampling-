@@ -4,7 +4,7 @@ This directory is an Overleaf-ready NeurIPS 2026 project for the XTC paper draft
 
 ## Contents
 
-- `main.tex`: **anonymous submission copy** — complete paper including all body sections, appendices, and the NeurIPS checklist (single-file layout). Preserved as-is; do not de-anonymize this file.
+- `main.tex`: **camera-ready copy** (`[main, final]`) with the named author block, acknowledgments, appendices, and the NeurIPS checklist. The anonymous submission copy is preserved in git history at commit `b92a882`.
 - `preprint.tex`: **named preprint / arXiv copy** — same body as `main.tex`, but compiled with `\usepackage[preprint]{neurips_2026}`, with the author block filled in and the NeurIPS checklist removed.
 - `neurips_2026.sty`: official NeurIPS 2026 style file copied from the official template
 - `figures/`: all figures (PDF + PNG previews); `figures/_make_new_figures.py` regenerates the human-eval / cross-vendor / IFEval figures
@@ -21,7 +21,7 @@ This directory is an Overleaf-ready NeurIPS 2026 project for the XTC paper draft
 
 | File | Mode | Authors | Checklist |
 | --- | --- | --- | --- |
-| `main.tex` | `[main]` | anonymized | included |
+| `main.tex` | `[main, final]` | named | included |
 | `preprint.tex` | `[preprint]` | named | removed |
 
 Both share `refs.bib`, `figures/`, and `neurips_2026.sty`. Body-text edits need to be
@@ -30,8 +30,10 @@ applied to both files, or diffed across them before submission.
 `preprint.tex` author list, in order: Philipp Emanuel Weidmann (Independent Researcher),
 Allen G. Roush (Thoughtworks), Judah Goldfeder (Columbia University), Sanjay Basu (Oracle),
 Ravid Shwartz-Ziv (New York University). Weidmann and Roush are equal-contribution
-co-first authors, with per-author footnotes recording that Weidmann originated the method
-and its reference implementations and that Roush ran the empirical program.
+co-first authors. Per-author footnotes record that Weidmann proposed the method and wrote
+its original implementation (merged into text-generation-webui, PR #6335) and that Roush ran
+the empirical program. The llama.cpp implementation was written by MaggotHATE (PR #9742) and
+the KoboldCpp one by LostRuins (v1.74). Both are credited in the Acknowledgments.
 
 ## Mode switches
 
