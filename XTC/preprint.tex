@@ -80,7 +80,7 @@
 \begin{abstract}
 Standard decoding rules for autoregressive language models promote diversity by rescaling the full next-token distribution or by truncating its low-probability tail.
 These strategies overlook a recurring regime of open-ended generation in which the model already assigns substantial probability to several plausible continuations yet still concentrates too much mass on the most generic choice.
-We introduce \xtc{} (\textbf{E}x\textbf{c}lude \textbf{T}op \textbf{C}hoices), a lightweight head-aware decoding operator that targets this \emph{head-ambiguity} regime directly.
+We introduce \xtc{} (E\textbf{x}clude \textbf{T}op \textbf{C}hoices), a lightweight head-aware decoding operator that targets this \emph{head-ambiguity} regime directly.
 Given a next-token distribution, \xtc{} identifies the set of tokens exceeding an absolute plausibility threshold~$\tau$.
 When two or more such tokens exist, it removes the dominant eligible choices with probability~$\rho$ and retains only the weakest plausible alternative before renormalizing.
 A comprehensive evaluation spanning 60 experiments across three primary model families (Gemma~3 27B q4, Gemma~3 12B q6, DeepSeek R1 14B q6), extended with a scaling validation on Llama 3.3 70B q4, confirms the predicted operating profile.
@@ -88,7 +88,10 @@ On creative generation tasks, \xtc{} improves the diversity-repetition Pareto fr
 When composed with temperature scaling, total improvements reach 38\% (Distinct-2) and 71\% (repeat trigram reduction) over baseline.
 A blinded Amazon Mechanical Turk study with 150 Master raters confirms that these distributional shifts translate to a 62.3\% creativity preference for \xtc{} ($p<10^{-4}$) without sacrificing fluency, and a cross-vendor GPT-4o control judge replicates the Anthropic-judge signal on every directional measure.
 On instruction-following (IFEval, Llama~3.3 70B q4), \xtc{} preserves prompt-level strict accuracy within 1.7 percentage points of baseline at parameters that recover most of the diversity gain. A temperature setting matched on Distinct-2 collapses IFEval by 8.8 points at the same Distinct-2 target.
-The effect is additive with temperature and repetition penalties, robust across quantization levels and model families, and consistent across all twelve tested prompt genres.
+The effect is additive with temperature and repetition penalties, robust across quantization levels and model families, and consistent across all twelve tested prompt genres. XTC has been adopted by popular open-source LLM inference
+frameworks, including \texttt{llama.cpp}, ExLlamaV2, and
+text-generation-webui, highlighting its impact on practical text
+generation.
 \end{abstract}
 
 
